@@ -15,12 +15,12 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  let myName = 'Hello, ' + name;
+  let myName = 'Hello, ' + name + '!';
   return myName;
 }
 // Remember to call the function to test
 
-console.log(helloName('Dakodah!'));
+console.log(helloName('Dakodah'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
@@ -71,9 +71,17 @@ console.log(getLast([11, 22, 44, 88]));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-  
+  for(let i = 0; i < array.length; i++)
+    if(value === array[i])
+      return true;
+    else(value != array[i])
+    return false;
 
 }
+let numbers1 = [-4, 10, 0, 20, -4]
+console.log(find(0, numbers1));
+console.log(find(100, numbers1));
+
 
 // ----------------------
 // Stretch Goals
